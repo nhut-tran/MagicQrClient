@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.2.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lodash.isequal": "^4.5.0",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.501.0",
     "next": "15.2.2",
     "next-qrcode": "^2.5.1",
     "react": "^19.0.0",
@@ -17,17 +23,20 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-pick-color": "^2.0.0",
-    "react-qrcode-logo": "^3.0.0"
+    "react-qrcode-logo": "^3.0.0",
+    "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/lodash.isequal": "^4.5.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "tailwindcss": "^4",
+    "tw-animate-css": "^1.2.6",
     "typescript": "^5"
   }
 }

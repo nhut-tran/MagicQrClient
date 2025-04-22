@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useState } from 'react';
-import { QRCode } from 'react-qrcode-logo';
+import { QRCode } from '../../lib/react-qrcode-logo/index.js';
 import { FrameStyle, useQRCodeContext } from './QRCodeContext';
 import { MdOutlineFileDownload } from "react-icons/md";
 import { useColorPicker } from 'react-best-gradient-color-picker';

@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Ubuntu_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./(layout)/header";
-import Footer from "./(layout)/footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+
+const ububu = Ubuntu_Sans({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ububu.className} bg-[#171a1d] text-white`}
       >
         <Header />
         {children}
