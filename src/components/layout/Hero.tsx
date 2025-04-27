@@ -25,7 +25,7 @@ function Hero() {
               <span className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4">
                 To Rule Them All!
               </span>
-              <p>Create one QR, change the destination at any time. With our great QR editor</p>
+              <p>Shorten URLs, customize beautifully branded QRs, and set time-based redirects — all in one place.</p>
             </div>
             <div className="flex gap-x-2.5 mt-5">
               <a href="#editor" className="px-4 py-2 bg-[#8952e0] text-white rounded hover:bg-[#7434db] active:bg-[#7434db] transition duration-200">Get Started</a>

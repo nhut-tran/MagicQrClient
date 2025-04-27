@@ -12,6 +12,7 @@ export default function QREditor(): ReactNode {
     return (
         <QRCodeContextProvider>
             <div className="container mx-auto px-4">
+                <h1 className="text-4xl font-bold text-center my-6">Powerfull QR Code Editor</h1>
                 <div className="flex flex-col lg:flex-row gap-6">
                     <AppQRCode />
                     <QRCodeCustomization />
