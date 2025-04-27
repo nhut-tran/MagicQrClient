@@ -6,7 +6,7 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 function Hero() {
     return (
         <div className="relative overflow-hidden">
-        <div className=" absolute left-0 w-full h-full z-0 opacity-30 overflow-hidden pointer-events-none" style={{
+        <div className=" absolute left-0 w-full h-screen z-0 opacity-30 overflow-hidden pointer-events-none" style={{
           backgroundImage: `
         radial-gradient(at top left, #4f1d9e 30%, transparent 80%),
         radial-gradient(at bottom, #2ab4d9 0%, transparent 60%),
