@@ -9,7 +9,7 @@ function Home() {
     <>
       
         <Hero />
-        <section className="section-padding flex flex-col items-stretch justify-center md:flex-row flex-wrap gap-4 md:gap-10 md:px-5 px-10 sm:px-10">
+        <section className="flex flex-col items-stretch justify-center md:flex-row flex-wrap gap-4 md:gap-10 md:px-5 px-10 sm:px-10">
           <Feature title={"Smart Redirects by Time of Day"} description={"Set multiple destination URLs and control when each one activates. Whether it's morning offers or late-night campaigns — your short link adapts to your strategy, automatically."}>
           <div className="w-9 h-9 max-w-3xl flex items-center justify-center rounded-full bg-[rgba(137,82,224,0.2)]"><Link color="#7434db" /></div>
           </Feature>
@@ -23,13 +23,13 @@ function Home() {
           <div className="w-9 h-9 max-w-3xl flex items-center justify-center rounded-full bg-[rgba(137,82,224,0.2)]"><Rocket color="#7434db" /></div>
           </Feature>
         </section>
-        <section id="editor" className="section-padding">
+        <section id="editor">
             <QrEditor></QrEditor>
         </section>
         <section id="pricing">
           <Pricing />
         </section>
-        <section id="faqs" className="section-padding">
+        <section id="faqs">
           <FAQ />
         </section>
 

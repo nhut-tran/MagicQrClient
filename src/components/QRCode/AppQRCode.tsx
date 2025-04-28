@@ -30,9 +30,18 @@ export function AppQRCode() {
     }
     const qrFrame =  transformFrameStyle(frameStyle, frameColor)
     return (
-        <div className="lg:w-2/3 bg-gray-800 rounded-xl p-6 shadow-xl">
-            <h2 className="text-2xl font-bold mb-6 text-center">QR Code Preview</h2>
-            <div className="flex flex-col items-center">
+        <div className="relative lg:w-2/3 rounded-xl shadow-xl py-7" style={{
+            backgroundImage: `
+          radial-gradient(at top left, #4f1d9e 30%, transparent 90%),
+          radial-gradient(at bottom, #4f1d9e 0%, transparent 60%),
+          radial-gradient(at bottom left, #2ab4d9 0%, transparent 50%),
+          radial-gradient(at top right, #1d979e, transparent),
+          radial-gradient(at bottom right, #4f1d9e 0%, transparent 30%)
+      `, backgroundBlendMode: "saturation"
+          }}>
+          <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
+            <h2 className="relative z-10 text-2xl font-bold mb-6 text-center">QR Code Preview</h2>
+            <div className="relative z-10 flex flex-col items-center">
                 <div className="bg-opacity-80 rounded-lg overflow-hidden shadow-xl">
                     <QRCode logoImage={logo} logoOpacity={0.3} logoHeight={200} logoWidth={200} logoPadding={0} logoPaddingStyle="circle" removeQrCodeBehindLogo={false} ref={ref} value={url} size={size} bgColor={bgColor} ecLevel={"H"} qrStyle={"squares"} fgColor={fgColor} quietZone={quiteZone} borderColor={frameColor} borderWidth={2} qrShape={frameStyle} />
                 </div>

@@ -1,11 +1,12 @@
-'use client'; // if you're using Next.js 13/14 app directory
+'use client';
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | undefined>(undefined);
 
-  const toggleFAQ = (index : number | undefined) => {
+  const toggleFAQ = (index: number | undefined) => {
     setOpenIndex(openIndex === index ? undefined : index);
   };
 
@@ -25,32 +26,40 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-6">Frequently asked questions</h2>
-      <div className="space-y-4">
-        {faqList.map((faq, index) => (
-          <div key={index} className="border border-[#7434db] rounded-lg">
-            <button
-              className="w-full flex justify-between items-center p-4 text-left font-semibold text-lg"
-              onClick={() => toggleFAQ(index)}
-            >
-              {faq.question}
-              <ChevronDown color="#7434db" className={`transition-all duration-300 ease-in-out ${openIndex === index ? 'rotate-180' : ''}`} />
-              
-            </button>
-            
+    <div className="section-padding py-20 bg-[#0d0d0d]">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+          Frequently asked questions
+        </h2>
+
+        <div className="space-y-6">
+          {faqList.map((faq, index) => (
             <div
-              className={`overflow-hidden transition-all duration-200 ease-in-out ${
-                openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-              }`}
+              key={index}
+              className="bg-[#161616] border border-[#7434db]/30 rounded-2xl shadow-md transition hover:shadow-lg"
             >
-              <div className="p-4 text-gray-300">
-                {faq.answer}
+              <button
+                className="w-full flex justify-between items-center p-6 text-left font-semibold text-white text-lg"
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq.question}
+                <ChevronDown
+                  color="#7434db"
+                  className={`transition-transform duration-500 ${openIndex === index ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+                  }`}
+              >
+                <div className="p-6 pt-0 text-gray-400 text-base">
+                  {faq.answer}
+                </div>
               </div>
             </div>
-            
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

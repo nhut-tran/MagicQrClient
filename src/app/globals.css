@@ -190,6 +190,8 @@
   }
 }
 
-.section-padding {
-  @apply py-10 md:py-20;
+@layer components {
+  .section-padding {
+    @apply py-10 px-8;
+  }
 }

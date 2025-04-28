@@ -16,7 +16,7 @@ function Hero() {
     `, backgroundBlendMode: "saturation"
         }}>
         </div>
-        <div className="relative px-10 pt-30 md:pt-10 pb-40 z-10 flex items-center text-center md:text-left">
+        <div className="relative px-10 pt-30 md:pt-10 z-10 flex items-center text-center md:text-left">
           <div className="flex flex-col items-center justify-center md:items-start  mx-auto">
             <div className="flex flex-col justify-center md:items-start md:justify-start">
               <span className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4">
